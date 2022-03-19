@@ -17,7 +17,7 @@
     <th>Juros Compostos</th>
   </tr>
 
-  <tr *ngFor="let juro of juros">
+  <tr *ngFor="let juro of getJurosCompostos()">
     <td>{{ juro.periodo }}</td>
     <td>{{ juro.simples }}</td>
     <td>{{ juro.composto }}</td>
