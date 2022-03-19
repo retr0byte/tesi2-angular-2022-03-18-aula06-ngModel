@@ -1,0 +1,25 @@
+<h2>Juros</h2>
+
+<div>Valor presente:</div>
+<input type="number" step="0.01" [(ngModel)]="vp" />
+
+<div>Juros (em %):</div>
+<input type="number" step="0.01" [(ngModel)]="j" />
+
+<div>Período (em meses):</div>
+<input type="number" step="1" [(ngModel)]="n" />
+
+<h3>Juros mês a mês:</h3>
+<table border="1">
+  <tr>
+    <th>Período (meses)</th>
+    <th>Juros Simples</th>
+    <th>Juros Compostos</th>
+  </tr>
+
+  <tr *ngFor="let juro of juros">
+    <td>{{ juro.periodo }}</td>
+    <td>{{ juro.simples }}</td>
+    <td>{{ juro.composto }}</td>
+  </tr>
+</table>
