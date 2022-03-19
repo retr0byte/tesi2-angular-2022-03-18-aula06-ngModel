@@ -12,15 +12,15 @@ export class JurosCompostosComponent implements OnInit {
   juros = [];
 
   constructor() {
-    this.vp = 100;
-    this.j = 2.5;
-    this.n = 3;
+    // this.vp = 100;
+    // this.j = 2.5;
+    // this.n = 3;
   }
 
   ngOnInit() {}
 
   getJurosCompostos() {
-    for (let i = 1; i <=   this.n; i++) {
+    for (let i = 1; i <= this.n; i++) {
       let simples = this.vp * (1 + (this.j / 100) * i);
       let composto = Math.pow(this.vp * (1 + this.j / 100), i);
       this.juros.push({ simples, composto, periodo: i });
